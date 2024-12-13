@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+  height:100vh;
+  width:100vw;
+}
+
+#wrapper{
+    
+    height:100%;
+    width:100%;
+    overflow-x: hidden;
+    
+    
+
+}
+.navigationbar{
+    display:flex;
+    height:10%;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right:10px;
+    
+    justify-content:space-between;
+    
+}
+
+
+.main{
+    height:90%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+
+}
+
+.main img {
+    position: absolute;
+    z-index:99;
+
+    height:500px;
+    width:500px;
+    object-fit: cover;
+}
+.scroolpart{
+    position:absolute;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space: nowrap;
+    width:100%;
+    top:20%;
+   
+     
+}
+.scroolpart::-webkit-scrollbar{
+    display:none;
+}
+.scroolpart h1{
+    display: inline-block;
+    font-size: 160px;
+    letter-spacing: 4px;
+    margin-left:10px;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+   
+
+    
+    
+}
+
+.scroolpart2{
+    position:absolute;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space: nowrap;
+    width:100%;
+    top:40%;
+    z-index:100;
+     
+}
+.scroolpart2::-webkit-scrollbar{
+    display:none;
+}
+.scroolpart2 h1{
+
+    display: inline-block;
+    font-size: 160px;
+    letter-spacing: 4px;
+    margin-left:10px;
+    color:transparent;
+    -webkit-text-stroke-color:black;
+    -webkit-text-stroke-width: 2px;
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    
+    
+}
+
+
+.scroolpart3{
+    position:absolute;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space: nowrap;
+    width:100%;
+    top:60%;
+    
+     
+}
+.scroolpart3::-webkit-scrollbar{
+    display:none;
+}
+.scroolpart3 h1{
+
+    display: inline-block;
+    font-size: 160px;
+    letter-spacing: 4px;
+    margin-left:10px;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    
+    }
+
+
+    @keyframes scroll{
+        0%{
+            transform: translateX(0%)      
+          }
+        100%{
+            
+            transform: translateX(calc(-100% ));
+        }
+    }
+     @keyframes scroll2{
+        0%{
+            transform: translateX(0%);
+            transform:translateY(0%)      
+          }
+        100%{
+            
+            transform: translateX(calc(-100% ));
+            transform: translateY(50%);
+        }
+    }
+
+.textarea{
+    position:absolute;
+    z-index:100;
+    text-transform: uppercase;
+    top:15%;
+    font-size: 12px;
+}
+
+@media(max-width:500px){
+    #wrapper{
+        flex-direction: column;
+    }
+
+}
